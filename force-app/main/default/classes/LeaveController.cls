@@ -9,7 +9,7 @@ public class LeaveController {
     
         Integer days = req.End_Date__c.daysBetween(req.Start_Date__c) + 1;
     
-        // 2. Fetch Leave Balance
+        // 2. Fetch Leave Balance(Changes done in Branch1)
         Leave_Balance__c lb = [
             SELECT Id, Available_Leaves__c, Used_Leaves__c
             FROM Leave_Balance__c
