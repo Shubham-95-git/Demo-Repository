@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Apply Leave">
+        
+        <div class="slds-p-around_medium">
+
+            <!-- Leave Type -->
+            <lightning-combobox
+                label="Leave Type"
+                value={leaveType}
+                options={leaveOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <!-- Start Date -->
+            <lightning-input
+                type="date"
+                label="Start Date"
+                value={startDate}
+                min={today}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- End Date -->
+            <lightning-input
+                type="date"
+                label="End Date"
+                value={endDate}
+                min={today}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Reason -->
+            <lightning-textarea
+                label="Reason"
+                value={reason}
+                onchange={handleChange}>
+            </lightning-textarea>
+
+            <br/>
+
+            <!-- Button -->
+            <lightning-button
+                label="Apply Leave"
+                variant="brand"
+                onclick={handleSubmit}>
+            </lightning-button>
+
+        </div>
+
+        <!-- Spinner -->
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+
+    </lightning-card>
+</template>
