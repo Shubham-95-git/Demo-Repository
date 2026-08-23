@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Create Contact" icon-name="standard:contact">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="First Name" onchange={handleChange} data-field="FirstName" required></lightning-input>
+            <lightning-input type="text" label="Last Name" onchange={handleChange} data-field="LastName" required></lightning-input>
+            <lightning-input type="phone" label="Phone" onchange={handleChange} data-field="Phone" required></lightning-input>
+            <lightning-input type="email" label="Email" onchange={handleChange} data-field="Email" required></lightning-input>
+        </div>
+        <div slot="footer" >
+            <lightning-button variant="neutral" label="Cancel" class="slds-m-right_medium" onclick={closeQuickAction}></lightning-button>
+            <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
