@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <lightning-progress-indicator current-step={currentStep} type="path">
+            <lightning-progress-step label="Personal Info" value="1"></lightning-progress-step>
+
+            <lightning-progress-step label="Address" value="2"></lightning-progress-step>
+
+            <lightning-progress-step label="Summary" value="3"></lightning-progress-step>
+        </lightning-progress-indicator>
+
+        <template if:true={showStepOne}>
+            <c-step-one form-data={formData} onnext={handleNext}></c-step-one>
+        </template>
+
+        <template if:true={showStepTwo}>
+            <c-step-two form-data={formData} onnext={handleNext} onprevious={handlePrevious}></c-step-two>
+        </template>
+
+        <template if:true={showStepThree}>
+            <c-step-three form-data={formData} onsubmitform={handleSubmit} onprevious={handlePrevious}></c-step-three>
+        </template>
+
+        <template if:true={isLoading}>
+            <lightning-spinner></lightning-spinner>
+        </template>
+
+    </lightning-card>
+</template>

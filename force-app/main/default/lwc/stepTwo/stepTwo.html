@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Address Information">
+       <div class="slds-p-around_medium">
+        
+            <lightning-input label="Street" data-field="MailingStreet" value={address.MailingStreet} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input label="City" data-field="MailingCity" value={address.MailingCity} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input label="State" data-field="MailingState" value={address.MailingState} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input label="Postal Code" data-field="MailingPostalCode" value={address.MailingPostalCode} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input label="Country" data-field="MailingCountry" value={address.MailingCountry} onchange={handleChange}>
+            </lightning-input>
+            <br/>
+                <lightning-button label="Previous" onclick={previous}>
+                </lightning-button>
+                <lightning-button label="Next" class="slds-m-left_small" variant="brand" onclick={next}>
+                </lightning-button>
+        </div>
+    </lightning-card>
+</template>

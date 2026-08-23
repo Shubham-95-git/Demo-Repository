@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Personal Information">
+
+        <div class="slds-p-around_medium">
+            <lightning-input label="First Name" data-field="FirstName" value={contact.FirstName} onchange={handleChange}></lightning-input>
+
+            <lightning-input label="Last Name" data-field="LastName" value={contact.LastName} onchange={handleChange} required></lightning-input>
+
+            <lightning-input label="Email" type="email" data-field="Email" value={contact.Email} onchange={handleChange}></lightning-input>
+
+            <lightning-input label="Phone" data-field="Phone" value={contact.Phone} onchange={handleChange}></lightning-input>
+
+            <br/>
+            <lightning-button label="Next" variant="brand" onclick={next}></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

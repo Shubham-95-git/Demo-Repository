@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Summary">
+
+        <div class="slds-p-around_medium">
+
+            <p>First Name : {formData.FirstName}</p>
+
+            <p>Last Name : {formData.LastName}</p>
+
+            <p>Email : {formData.Email}</p>
+
+            <p>Phone : {formData.Phone}</p>
+
+            <p>City : {formData.MailingCity}</p>
+
+            <p>State : {formData.MailingState}</p>
+
+            <br/>
+
+            <lightning-button label="Previous" onclick={previous}>
+            </lightning-button>
+
+            <lightning-button label="Submit" class="slds-m-left_small" variant="brand" onclick={submit}>
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
+</template>
